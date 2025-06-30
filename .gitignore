@@ -1,0 +1,56 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# User-specific files
+.vscode/
+.vscode/settings.json
+/.vs/VSWorkspaceState.json
+/.vs/v16/.suo
+/.vs/config/applicationhost.config
+/.vs/slnx.sqlite
+/chrome-debug
+
+# local version of config settings (including replacement tokens)
+/src/environment.js
+
+# shouldn't be used at all, but either way, keep it out of the repository
+package-lock.json
+
+# compiled output
+/dist
+/docs
+/documentation
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db

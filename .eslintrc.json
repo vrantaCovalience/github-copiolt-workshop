@@ -1,0 +1,62 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "eslint-config-js-ts",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "no-useless-constructor": "off",
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/sort-lifecycle-methods": ["error"],
+        "@angular-eslint/use-component-view-encapsulation": ["error"],
+        "@angular-eslint/prefer-standalone-component": ["error"],
+        "@angular-eslint/no-conflicting-lifecycle": ["error"]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "parser": "@angular-eslint/template-parser",
+      "extends": [
+        "plugin:prettier/recommended",
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ],
+        "@angular-eslint/template/no-duplicate-attributes": ["error"],
+        "@angular-eslint/template/elements-content": ["error"],
+        "@angular-eslint/template/no-inline-styles": ["error"],
+        "@angular-eslint/template/button-has-type": ["error"]
+      }
+    }
+  ]
+}
